@@ -1,0 +1,30 @@
+body {
+    font-size: 24px;
+    margin: 0;
+    font-family: 'Mukta', sans-serif;
+}
+
+header {
+    color: white;
+    text-align: center;
+    background-color: #332c7a;
+    padding: 10px 0;
+}
+
+.container {
+    margin: 0 auto;
+
+    width: 90%;
+    max-width: 75ch;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    background-color: #6e1f7c;
+    padding: 10px 0;
+}
+
+a {
+    text-decoration: none;
+}
