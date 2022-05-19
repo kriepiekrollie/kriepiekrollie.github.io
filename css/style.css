@@ -1,19 +1,16 @@
+/* Content */
+
 body {
     font-size: 24px;
     margin: 0;
     font-family: 'Mukta', sans-serif;
 }
 
-header {
-    color: white;
-    text-align: center;
-    background-color: #332c7a;
-    padding: 10px 0;
-}
-
 .container {
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
-
+    clear: both;
     width: 90%;
     max-width: 75ch;
 }
@@ -25,6 +22,51 @@ footer {
     padding: 10px 0;
 }
 
+p {
+    margin: 10px;
+}
+
+/* Links */
+
 a {
     text-decoration: none;
+    color: blue
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar */
+
+header {
+    color: white;
+    text-align: center;
+    background-color: #332c7a;
+    padding: 10px 0;
+}
+
+ul.navbar {
+    flex-direction: row-reverse;
+    display: flex;
+    margin: 1px 0;
+    padding: 0 20px;
+}
+
+ul.navbar li {
+    list-style: none;
+    padding: 0 10px;
+}
+
+ul.navbar li a {
+    text-decoration: none;
+    color: white;
+}
+
+ul.navbar li a:hover {
+    text-decoration: underline;
 }
