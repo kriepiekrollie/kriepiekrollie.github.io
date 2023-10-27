@@ -1,0 +1,41 @@
+
+.projectSection {
+  margin-top: 44px;
+  margin: 44px 10px 10px 10px;
+  width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  text-wrap: break-word;
+
+  & .projectItem {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    & img {
+      flex: 0 0 300;
+      width: 300px;
+      border-radius: 5px;
+    }
+    & .projectText {
+      margin-left: 40px;
+    }
+  }
+}
+
+@media screen and (max-width:900px) {
+  .projectSection {
+    & .projectItem {
+      flex-direction: column;
+      & .projectText {
+        margin-left: 0;
+      }
+    }
+  }
+}

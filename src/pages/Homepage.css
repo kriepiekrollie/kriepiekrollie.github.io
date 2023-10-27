@@ -6,7 +6,7 @@ html {
   font-style: italic;
 }
 
-section {
+.homeSection {
   width: 100vw;
   height: 100vh;
 
@@ -80,7 +80,7 @@ section {
 }
 
 @media screen and (max-width:900px) {
-  section {
+  .homeSection {
     flex-direction: column;
     & img {
       width: 90%;

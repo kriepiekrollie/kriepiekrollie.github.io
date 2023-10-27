@@ -1,3 +1,12 @@
+.topBar {
+  z-index: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 54px;
+  background-color: #1e1e2e;
+}
 
 .homeButton {
   width: 24px;
@@ -108,6 +117,19 @@
 }
 .navBar.hidden {
   clip-path: circle(0 at top right);
+}
+
+a {
+  text-decoration: none;
+}
+a:link {
+  color: #89b4fa;
+}
+a:visited {
+  color: #cba6f7;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width:900px) {

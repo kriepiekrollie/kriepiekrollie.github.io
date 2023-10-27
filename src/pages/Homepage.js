@@ -57,7 +57,7 @@ export default function Homepage() {
   return (
     <>
 
-      <section>
+      <section className="homeSection">
         <div className="introText">
           <TypeText lines={[
             "my name is benjamin.",
@@ -72,7 +72,7 @@ export default function Homepage() {
         </div>
       </section>
 
-      <section>
+      <section className="homeSection">
         <div className="infoText">
           <p><span className="italics">name:</span> benjamin kleyn</p>
           <p><span className="italics">pronouns:</span> he/him</p>

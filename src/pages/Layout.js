@@ -12,6 +12,7 @@ export default function Layout() {
 
   return (
     <>
+      <div className="topBar" />
       <div className="homeButton" onClick={() => navigate("/")}>
         <span className="material-symbols-outlined">
           home
