@@ -1,6 +1,62 @@
 import { useRef, useMemo, useState, useEffect } from "react";
 import "./Homepage.css";
 
+const STAR_COLORS = [
+  "#dd7878",
+  "#7287fd",
+  "#40a02b",
+  "#df8e1d",
+  "#585b70",
+];
+
+function Star()
+{
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
+  const [delay, setDelay] = useState(0);
+  const [angle, setAngle] = useState(0);
+  const [color, setColor] = useState("#ffffff");
+
+  useEffect(() => {
+    setX(Math.random());
+    setY(Math.random());
+    setDelay(Math.random());
+    setAngle(Math.random());
+    setColor(STAR_COLORS[4]);
+  }, []);
+
+  return (
+    <div className="starWrapper" style={{
+      left: (100 * x) + "%", 
+      top: (100 * y) + "%", 
+      color: color,
+      transform: "rotate(" + 360 * angle + "deg)",
+    }}>
+      <span className="material-symbols-outlined" style={{
+        animationDelay: delay * 5 + "s",
+      }}>
+        star
+      </span>
+    </div>
+  )
+}
+
+function Stars() {
+  const [starsArray, setStarsArray] = useState([]);
+  useEffect(() => {
+    const newStarsArray = [];
+    for (let i = 0; i < 100; i++) {
+      newStarsArray.push(<Star/>);
+    }
+    setStarsArray(newStarsArray);
+  }, []);
+  return (
+    <div className="starBackdrop">
+      {starsArray}
+    </div>
+  );
+}
+
 function TypeText({ lines, letterTime, lineTime }) {
 
   const ref = useRef(null);
@@ -44,7 +100,7 @@ function TypeText({ lines, letterTime, lineTime }) {
         if (idx < currentLine) {
           return <>{line}<br/></>;
         } else if (idx == currentLine) {
-          return <>{line.substring(0, lineProgress) + "|"}<br/></>;
+          return <>{line.substring(0, lineProgress)}<span className="typingCursor">|</span><br/></>;
         } else {
           return <br/>;
         }
@@ -56,6 +112,7 @@ function TypeText({ lines, letterTime, lineTime }) {
 export default function Homepage() {
   return (
     <>
+      <Stars />
 
       <section className="homeSection">
         <div className="introText">
@@ -66,7 +123,7 @@ export default function Homepage() {
           ]} letterTime={40} lineTime={400}/>
         </div>
         <div className="downArrow">
-          <span class="material-symbols-outlined">
+          <span className="material-symbols-outlined">
             expand_more
           </span>
         </div>
