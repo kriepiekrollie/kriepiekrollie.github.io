@@ -134,10 +134,14 @@ a:hover {
 
 @media screen and (max-width:900px) {
   .navBar {
+    transition: clip-path 0s;
     & .navBarItemContainer {
       width: 90%;
       & .navBarItem {
         font-size: 3em;
+      }
+      & .navBarItem::after {
+        transition: 0s;
       }
     }
   }

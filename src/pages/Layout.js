@@ -7,6 +7,7 @@ export default function Layout() {
   const navigate_ = useNavigate();
   const navigate = (path) => {
     navigate_(path);
+    window.scrollTo(0, 0);
     setHiddenNavbar(true);
   };
 

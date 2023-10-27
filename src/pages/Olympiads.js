@@ -2,7 +2,7 @@ import "./Homepage.css";
 
 export default function Olympiads() {
   return (
-    <section>
+    <section className="homeSection">
       <div>
         Sometimes I do olympiads.
       </div>

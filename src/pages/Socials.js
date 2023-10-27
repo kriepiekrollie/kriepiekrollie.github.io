@@ -2,7 +2,7 @@ import "./Homepage.css";
 
 export default function Socials() {
   return (
-    <section>
+    <section className="homeSection">
       <div>
         Sometimes I take part in social media.
       </div>
