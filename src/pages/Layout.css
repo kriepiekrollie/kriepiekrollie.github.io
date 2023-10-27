@@ -21,6 +21,10 @@
   cursor: pointer;
 
   z-index: 10;
+
+  & span {
+    user-select: none;
+  }
 }
 .homeButton:hover {
   color: #11111b;
@@ -40,6 +44,10 @@
   cursor: pointer;
 
   z-index: 10;
+
+  & span {
+    user-select: none;
+  }
 }
 .menuButton:hover {
   color: #11111b;
