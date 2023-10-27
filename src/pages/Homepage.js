@@ -1,35 +1,25 @@
 import { useRef, useMemo, useState, useEffect } from "react";
 import "./Homepage.css";
 
-const STAR_COLORS = [
-  "#dd7878",
-  "#7287fd",
-  "#40a02b",
-  "#df8e1d",
-  "#585b70",
-];
-
 function Star()
 {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
   const [delay, setDelay] = useState(0);
   const [angle, setAngle] = useState(0);
-  const [color, setColor] = useState("#ffffff");
 
   useEffect(() => {
     setX(Math.random());
     setY(Math.random());
     setDelay(Math.random());
     setAngle(Math.random());
-    setColor(STAR_COLORS[4]);
   }, []);
 
   return (
     <div className="starWrapper" style={{
       left: (100 * x) + "%", 
       top: (100 * y) + "%", 
-      color: color,
+      color: "#585b70",
       transform: "rotate(" + 360 * angle + "deg)",
     }}>
       <span className="material-symbols-outlined" style={{
@@ -122,6 +112,7 @@ export default function Homepage() {
             "welcome.",
           ]} letterTime={40} lineTime={400}/>
         </div>
+
         <div className="downArrow">
           <span className="material-symbols-outlined">
             expand_more
