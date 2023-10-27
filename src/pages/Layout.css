@@ -1,0 +1,122 @@
+
+.homeButton {
+  width: 24px;
+  height: 24px;
+  padding: 15px;
+  border-radius: 0 0 20px 0;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  cursor: pointer;
+
+  z-index: 10;
+}
+.homeButton:hover {
+  color: #11111b;
+  background-color: #f38ba8;
+}
+
+.menuButton {
+  width: 24px;
+  height: 24px;
+  padding: 15px;
+  border-radius: 0 0 0 20px;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  cursor: pointer;
+
+  z-index: 10;
+}
+.menuButton:hover {
+  color: #11111b;
+  background-color: #cba6f7;
+}
+
+.navBar {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  background-color: #313244;
+
+  clip-path: circle(200% at top right);
+  transition: clip-path 0.5s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  & .navBarItemContainer {
+    width: 60%;
+
+    & .navBarItem {
+      --hovercolor: #cdd6f4;
+      font-size: 4em;
+      margin: 0.1em;
+      padding: 0.2em;
+      width: max-content;
+      cursor: pointer;
+      position: relative;
+    }
+    & .navBarItem:hover {
+      color: var(--hovercolor);
+    }
+
+    & .navBarItem::after {
+      content: "";
+
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+
+      height: 3px;
+      width: 0;
+      transition: 0.2s;
+
+      background-color: var(--hovercolor);
+    }
+    & .navBarItem:hover::after {
+      left: 0;
+      width: 100%;
+    }
+
+    & .navBarItem:nth-child(1) {
+      --hovercolor: #eba0ac;
+    }
+    & .navBarItem:nth-child(2) {
+      --hovercolor: #fab387;
+    }
+    & .navBarItem:nth-child(3) {
+      --hovercolor: #f9e2af;
+    }
+    & .navBarItem:nth-child(4) {
+      --hovercolor: #a6e3a1;
+    }
+    & .navBarItem:nth-child(5) {
+      --hovercolor: #89dceb;
+    }
+  }
+}
+.navBar.hidden {
+  clip-path: circle(0 at top right);
+}
+
+@media screen and (max-width:900px) {
+  .navBar {
+    & .navBarItemContainer {
+      width: 90%;
+      & .navBarItem {
+        font-size: 3em;
+      }
+    }
+  }
+}
