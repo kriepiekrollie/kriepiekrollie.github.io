@@ -1,5 +1,5 @@
 .topBar {
-  z-index: 0;
+  z-index: 5;
   position: fixed;
   left: 0;
   top: 0;
@@ -140,7 +140,113 @@ a:hover {
   text-decoration: underline;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.scrollSection {
+  z-index: 0;
+  margin: 44px 0;
+  width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  text-wrap: break-word;
+
+  & .sectionContent {
+    z-index: 2;
+    margin: 15px;
+    max-width: 100vw;
+  }
+}
+
+.screenSection {
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-bottom: 5px solid #11111b;
+  overflow-y: hidden;
+
+  & .sectionContent {
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    align-content: center;
+
+    & img {
+      width: 40%;
+      max-height: 600px;
+      margin: 30px;
+      border-radius: 0 80px 0 80px;
+      box-shadow: 0px 0px 10px #11111b;
+      transition: box-shadow 0.2s, transform 0.2s;
+      z-index: 2;
+    }
+
+    & img:hover {
+      box-shadow: 10px 10px 10px #11111b;
+      transform: scale(1.01) rotate(0.5deg);
+    }
+  }
+}
+
+.screenSection:last-child {
+  border-bottom: 0;
+}
+
+
+.downArrow {
+  width: 24px;
+  height: 24px;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -12px;
+
+  & span {
+    user-select: none;
+  }
+}
+
+
 @media screen and (max-width:900px) {
+  .scrollSection {
+  }
+  .screenSection {
+    flex-direction: column;
+    & .sectionContent {
+      flex-direction: column;
+      & img {
+        width: 90%;
+        max-width: 500px;
+        margin: 0;
+        border-radius: 0 40px 0 40px;
+      }
+    }
+  }
   .navBar {
     transition: clip-path 0s;
     & .navBarItemContainer {

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link, Outlet } from "react-router-dom";
 import "./Layout.css";
+import StarryBackdrop from "../components/StarryBackdrop";
 
 export default function Layout() {
   const [hiddenNavbar, setHiddenNavbar] = useState(true);
@@ -36,6 +37,7 @@ export default function Layout() {
         </div>
       </div>
 
+      <StarryBackdrop />
       <Outlet />
     </>
   );

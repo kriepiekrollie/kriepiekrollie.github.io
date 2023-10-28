@@ -1,104 +1,20 @@
-html {
-  scroll-snap-type: y mandatory;
-}
-
-.italics {
-  font-style: italic;
-}
-
-@keyframes rotation {
-  from { transform: rotate(0deg); };
-  to { transform: rotate(360deg); };
-}
-
-@keyframes flicker {
-  from { transform: scale(1.0); };
-  to { transform: scale(0.6); };
-}
-
-.starBackdrop {
-  z-index: -1;
-  position: fixed;
-  min-width: 200vw;
-  min-height: 200vh;
-  aspect-ratio: 1 / 1;
-
-  margin-left: -50%;
-  margin-top: -50%;
-  left: 25%;
-  top: 25%;
-
-  & div {
-    position: absolute;
-
-    & span {
-      animation-name: flicker;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-    }
-  }
-
-  animation-name: rotation;
-  animation-duration: 720s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.typingCursor {
-  color: white;
-}
-
-.homeSection {
-  width: 100vw;
-  height: 100vh;
-
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  border-bottom: 5px solid #11111b;
-  overflow-y: hidden;
-
-  & img {
-    width: 40%;
-    margin: 30px;
-    border-radius: 0 80px 0 80px;
-  }
-}
-
-.homeSection:last-child {
-  border-bottom: 0;
-}
-
-.downArrow {
-  width: 24px;
-  height: 24px;
-
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -12px;
-
-  & span {
-    user-select: none;
-  }
-}
-
 .introText {
   text-align: center;
   font-size: 4em;
+  z-index: 2;
 }
 
 .infoText {
-  width: max-content;
-  margin: 30px;
+
+  padding: 30px;
   font-size: 2em;
   text-wrap: break-word;
+  max-width: 100vw;
+  z-index: 2;
+
+  & h1 {
+    margin: 10px 0;
+  }
 
   & p {
     margin: 0;
@@ -124,7 +40,7 @@ html {
       color: #a6e3a1;
     }
   }
-  & :nth-child(5) {
+  & p:nth-child(5) {
     & span {
       color: #89dceb;
     }
@@ -132,18 +48,10 @@ html {
 }
 
 @media screen and (max-width:900px) {
-  .homeSection {
-    flex-direction: column;
-    & img {
-      width: 90%;
-      margin: 0;
-      border-radius: 0 40px 0 40px;
-    }
-  }
   .introText {
     font-size: 2em;
   }
   .infoText {
-    width: 90%;
+    font-size: 1.5em;
   }
 }

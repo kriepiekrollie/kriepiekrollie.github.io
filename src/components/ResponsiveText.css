@@ -1,0 +1,16 @@
+
+.longText {
+  display: inherit;
+}
+.shortText {
+  display: none;
+}
+
+@media screen and (max-width:900px) {
+  .longText {
+    display: none;
+  }
+  .shortText {
+    display: inherit;
+  }
+}

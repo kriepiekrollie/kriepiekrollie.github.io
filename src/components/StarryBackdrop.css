@@ -1,0 +1,45 @@
+
+@keyframes rotation {
+  from { transform: rotate(0deg); };
+  to { transform: rotate(360deg); };
+}
+
+@keyframes flicker {
+  from { transform: scale(1.0); };
+  to { transform: scale(0.6); };
+}
+
+.starryBackdrop {
+  z-index: 1;
+  position: fixed;
+  min-width: 200vw;
+  min-height: 200vh;
+  aspect-ratio: 1 / 1;
+
+  margin-left: -50%;
+  margin-top: -50%;
+  left: 25%;
+  top: 25%;
+
+  & div {
+    position: absolute;
+    cursor: default;
+
+    & span {
+      user-select: none;
+      animation-name: flicker;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    & span:hover {
+      transform: scale(1.25);
+      animation-name: none;
+    }
+  }
+
+  animation-name: rotation;
+  animation-duration: 720s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
