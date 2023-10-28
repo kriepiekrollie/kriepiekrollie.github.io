@@ -1,12 +1,116 @@
-
+/* How is this the only way I can get it to work on all browsers???? webdev is too cursed. */
+@-webkit-keyframes rotation {
+  from { 
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg); 
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotation {
+  from { 
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg); 
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -transform: rotate(360deg);
+  }
+}
+@-o-keyframes rotation {
+  from { 
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg); 
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -transform: rotate(360deg);
+  }
+}
 @keyframes rotation {
-  from { transform: rotate(0deg); };
-  to { transform: rotate(360deg); };
+  from { 
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg); 
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -transform: rotate(360deg);
+  }
 }
 
+@-webkit-keyframes flicker {
+  from { 
+    -webkit-transform: scale(1.0); 
+    -moz-transform: scale(1.0); 
+    -o-transform: scale(1.0); 
+    transform: scale(1.0); 
+  };
+  to { 
+    -webkit-transform: scale(0.6); 
+    -moz-transform: scale(0.6); 
+    -o-transform: scale(0.6); 
+    transform: scale(0.6); 
+  };
+}
+@-moz-keyframes flicker {
+  from { 
+    -webkit-transform: scale(1.0); 
+    -moz-transform: scale(1.0); 
+    -o-transform: scale(1.0); 
+    transform: scale(1.0); 
+  };
+  to { 
+    -webkit-transform: scale(0.6); 
+    -moz-transform: scale(0.6); 
+    -o-transform: scale(0.6); 
+    transform: scale(0.6); 
+  };
+}
+@-o-keyframes flicker {
+  from { 
+    -webkit-transform: scale(1.0); 
+    -moz-transform: scale(1.0); 
+    -o-transform: scale(1.0); 
+    transform: scale(1.0); 
+  };
+  to { 
+    -webkit-transform: scale(0.6); 
+    -moz-transform: scale(0.6); 
+    -o-transform: scale(0.6); 
+    transform: scale(0.6); 
+  };
+}
 @keyframes flicker {
-  from { transform: scale(1.0); };
-  to { transform: scale(0.6); };
+  from { 
+    -webkit-transform: scale(1.0); 
+    -moz-transform: scale(1.0); 
+    -o-transform: scale(1.0); 
+    transform: scale(1.0); 
+  };
+  to { 
+    -webkit-transform: scale(0.6); 
+    -moz-transform: scale(0.6); 
+    -o-transform: scale(0.6); 
+    transform: scale(0.6); 
+  };
 }
 
 .starryBackdrop {
@@ -27,19 +131,24 @@
 
     & span {
       user-select: none;
-      animation-name: flicker;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
+      -webkit-animation: flicker 5s infinite linear;
+      -moz-animation: flicker 5s infinite linear;
+      -o-animation: flicker 5s infinite linear;
+      animation: flicker 5s infinite linear;
     }
     & span:hover {
+      -webkit-transform: scale(1.25);
       transform: scale(1.25);
+
+      -webkit-animation-name: none;
+      -moz-animation-name: none;
+      -o-animation-name: none;
       animation-name: none;
     }
   }
 
-  animation-name: rotation;
-  animation-duration: 720s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  -webkit-animation: rotation 720s infinite linear;
+  -moz-animation: rotation 720s infinite linear;
+  -o-animation: rotation 720s infinite linear;
+  animation: rotation 720s infinite linear;
 }
