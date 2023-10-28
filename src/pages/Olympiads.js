@@ -95,7 +95,7 @@ export default function Olympiads() {
                 </tr>
 
                 <tr>
-                  <th> <a href="https://www.samf.ac.za/en/">
+                  <th> <a href="https://www.samf.ac.za/en/sa-mathematics-olympiad">
                     <ResponsiveText longText="South African Maths Olympiad" shortText="SAMO" />
                   </a> </th>
                   <td> — </td>
@@ -107,7 +107,7 @@ export default function Olympiads() {
                 </tr>
 
                 <tr>
-                  <th> <a href="https://www.samf.ac.za/en/">
+                  <th> <a href="https://www.samf.ac.za/en/tertiary-olympiad">
                     <ResponsiveText longText="South African Tertiary Maths Olympiad" shortText="SATMO" />
                   </a> </th>
                   <td> </td>
@@ -177,7 +177,7 @@ export default function Olympiads() {
                 </tr>
 
                 <tr>
-                  <th> <a href="https://olympiad.org.za/programming-olympiad/">
+                  <th> <a href="https://ioinformatics.org/">
                     <ResponsiveText longText="International Olympiad in Informatics" shortText="IOI" />
                   </a> </th>
                   <td>  </td>
@@ -189,6 +189,8 @@ export default function Olympiads() {
             </div>
 
             <TableKey />
+
+            <p> Also have a look at <a href="https://codeforces.com/profile/kriepiekrollie"> my codeforces profile </a> </p>
 
           </div>
         </div>
