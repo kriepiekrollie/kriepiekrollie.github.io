@@ -8,7 +8,7 @@ export default function Interests() {
         <div className="sectionContent">
           <div className="infoText">
             <Typewriter lines={[
-              "Here are some of my interests <3"
+              "Here are some of my interests ♥"
             ]} letterTime={40} lineTime={40} />
           </div>
         </div>
@@ -85,6 +85,11 @@ export default function Interests() {
             <h1> Gaming </h1>
             
             <p> Gaming is a hobby that goes hand-in-hand with liking computers </p>
+            
+            <p> My favorite games include osu!, Minecraft, Counter-Strike, Stardew Valley, Among Us and Factorio. </p>
+
+            <p> Recently I was recommended Genshin Impact and I don't know how to feel about it. </p>
+
           </div>
 
           <figure>
