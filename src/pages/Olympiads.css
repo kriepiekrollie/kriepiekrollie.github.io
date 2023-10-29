@@ -10,7 +10,7 @@
     }
   }
   & .tableContainer {
-    overflow-x: scroll;
+    overflow-x: auto;
     width: max-content;
     max-width: 90vw;
     margin: 20px 0;

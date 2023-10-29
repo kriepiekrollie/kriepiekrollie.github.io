@@ -10,7 +10,9 @@ export default function Projects() {
 
         <h2> Unfinished </h2>
         <div className="projectCard">
-          <img src="polyhedra.jpg" />
+          <a href="https://kriepiekrollie.github.io/polyhedra/">
+            <img src="polyhedra.jpg" />
+          </a>
           <div className="projectText">
             <a href="https://kriepiekrollie.github.io/polyhedra/"><h3> Polyhedral Playground </h3></a>
             <p> I wanted to create a fun and pretty way to play with polyhedra so this is what I came up with. </p>
@@ -19,7 +21,9 @@ export default function Projects() {
         </div>
 
         <div className="projectCard">
-          <img src="cpsolutions.jpg" />
+          <a href="https://github.com/kriepiekrollie/cp-solutions/">          
+            <img src="cpsolutions.jpg" />
+          </a>
           <div className="projectText">
             <a href="https://github.com/kriepiekrollie/cp-solutions/"><h3> CP Solutions </h3></a>
             <p> Basically solutions to various competitive programming problems. </p>
@@ -31,7 +35,9 @@ export default function Projects() {
 
         <h2> Done </h2>
         <div className="projectCard">
-          <img src="setgame.jpg" />
+          <a href="https://kriepiekrollie.github.io/set-game/">          
+            <img src="setgame.jpg" />
+          </a>
           <div className="projectText">
             <a href="https://kriepiekrollie.github.io/set-game/"><h3> Set Game </h3></a>
             <p> A recreation of a card game I like very much </p>
@@ -40,7 +46,9 @@ export default function Projects() {
         </div>
 
         <div className="projectCard">
-          <img src="bbbenjamini.jpg" />
+          <a href="https://kriepiekrollie.github.io/bbbenjamini/">          
+            <img src="bbbenjamini.jpg" />
+          </a>
           <div className="projectText">
             <a href="https://kriepiekrollie.github.io/bbbenjamini/"><h3> bbbenjamini </h3></a>
             <p> The website I made when I was 13. It's very cringe and it's written in Afrikaans, sorry. </p>
