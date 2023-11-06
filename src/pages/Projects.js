@@ -35,6 +35,17 @@ export default function Projects() {
 
         <h2> Done </h2>
         <div className="projectCard">
+          <a href="https://kriepiekrollie.github.io/firebase-color/">          
+            <img src="colors.png" />
+          </a>
+          <div className="projectText">
+            <a href="https://kriepiekrollie.github.io/firebase-color/"><h3> color together </h3></a>
+            <p> My first attempt at making something with firebase. </p>
+            <p> This site lets you change the color and have the change be reflected for everyone viewing the site. </p>
+          </div>
+        </div>
+
+        <div className="projectCard">
           <a href="https://kriepiekrollie.github.io/set-game/">          
             <img src="setgame.jpg" />
           </a>
