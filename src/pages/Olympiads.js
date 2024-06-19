@@ -91,7 +91,7 @@ export default function Olympiads() {
                   <td> </td>
                   <td> </td>
                   <td> </td>
-                  <td> TBA </td>
+                  <td> <ResponsiveText longText="5th Place*" shortText="5th*" /> </td>
                 </tr>
 
                 <tr>

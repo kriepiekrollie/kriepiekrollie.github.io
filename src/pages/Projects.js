@@ -8,40 +8,28 @@ export default function Projects() {
         <h1>Projects</h1>
         <p>Here are some things i've been making for fun that you might find interesting:</p>
 
-        <h2> Unfinished </h2>
+        <div className="projectCard">
+          <a href="https://github.com/kriepiekrollie/cf-tool">
+            <img src="cpsolutions.jpg" />
+          </a>
+          <div className="projectText">
+            <a href="https://github.com/kriepiekrollie/cf-tool"><h3> cf-tool </h3></a>
+            <p> I had been wanting to make this tool, and I had been wanting to learn Rust, so why not kill two birds with one stone? </p>
+          </div>
+        </div>
+
+        <h2>Some Web Stuff</h2>
+
+        <p> I'm not super great at web design but i do dabble every now and then. </p>
+
         <div className="projectCard">
           <a href="https://kriepiekrollie.github.io/polyhedra/">
             <img src="polyhedra.jpg" />
           </a>
           <div className="projectText">
             <a href="https://kriepiekrollie.github.io/polyhedra/"><h3> Polyhedral Playground </h3></a>
-            <p> I wanted to create a fun and pretty way to play with polyhedra so this is what I came up with. </p>
-            <p> I'm still adding shapes and I hope to have a huge catalog and more cool features by the end. </p>
-          </div>
-        </div>
-
-        <div className="projectCard">
-          <a href="https://github.com/kriepiekrollie/cp-solutions/">          
-            <img src="cpsolutions.jpg" />
-          </a>
-          <div className="projectText">
-            <a href="https://github.com/kriepiekrollie/cp-solutions/"><h3> CP Solutions </h3></a>
-            <p> Basically solutions to various competitive programming problems. </p>
-            <p> 
-              So far I've only added two section from <a href="https://cses.fi">cses</a> and the past few years of <a href="https://olympiad.org.za/programming-olympiad/"> saco </a>.
-            </p>
-          </div>
-        </div>
-
-        <h2> Done </h2>
-        <div className="projectCard">
-          <a href="https://kriepiekrollie.github.io/firebase-color/">          
-            <img src="colors.png" />
-          </a>
-          <div className="projectText">
-            <a href="https://kriepiekrollie.github.io/firebase-color/"><h3> color together </h3></a>
-            <p> My first attempt at making something with firebase. </p>
-            <p> This site lets you change the color and have the change be reflected for everyone viewing the site. </p>
+            <p> I wanted to have a fun and pretty way to play with polyhedra so this is what I came up with. </p>
+            <p> I've been to lazy to add more shapes. </p>
           </div>
         </div>
 
@@ -57,13 +45,14 @@ export default function Projects() {
         </div>
 
         <div className="projectCard">
-          <a href="https://kriepiekrollie.github.io/bbbenjamini/">          
-            <img src="bbbenjamini.jpg" />
+          <a href="https://kriepiekrollie.github.io/firebase-color/">          
+            <img src="colors.png" />
           </a>
           <div className="projectText">
-            <a href="https://kriepiekrollie.github.io/bbbenjamini/"><h3> bbbenjamini </h3></a>
-            <p> The website I made when I was 13. It's very cringe and it's written in Afrikaans, sorry. </p>
-            <p> I remember I mostly made this by copying from a codeninjas book that I had begged my parents to buy me. </p>
+            <a href="https://kriepiekrollie.github.io/firebase-color/"><h3> color together </h3></a>
+            <p> My first attempt at making something with firebase. </p>
+            <p> This site lets you change the color and have the change be reflected for everyone viewing the site. </p>
+            <p> It's very broken lol. </p>
           </div>
         </div>
 
